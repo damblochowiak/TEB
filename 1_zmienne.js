@@ -1,112 +1,174 @@
-zmienna = 18;
-//let zmienna = 18;
-document.write(zmienna);
+/**
+ * 1_zmienne.js
+ * Author: Damian Błochowiak <xomod99@gmail.com>
+ * MIT License
+ */
 
-let imie = "Janusz";
-document.write("<br>Twoje imię: <br>" + imie);
+/**
+ * @description Wyświetl zmienną typu integer (liczba).
+ */
+(function() {
+  zmienna = 18;
+  //let zmienna = 18;
+  writeLine("Zmienna typu integer: " + zmienna);
+})();
 
-// + konkatenacja
+/**
+ * @description Wyświetl swoje imię. (konkatenacja - concatenation)
+ */
+(function() {
+  const imie = "Janusz";
 
-let a = 5, b =3, suma;
-suma = a + b;
-document.write("<br>Suma a i b wynosi: <br>" + suma);
+  writeLine("Twoje imię: " + imie);
+})();
 
+/** Przykładowe liczby na cele poniższych działań. */
+let a = 5,
+  b = 3;
 
-//potęgowanie
+/**
+ * @description Dodawanie dwóch liczb.
+ */
+(function() {
+  // Dodawanie wartości zmiennej a do wartości zmiennej b.
+  const suma = a + b;
 
-let potega = Math.pow(a, b);
-//alert(potega);  //125
+  writeLine("Suma a i b wynosi: " + suma);
+})();
 
+/**
+ * @description Ułamek z dwóch liczb.
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow}
+ */
+(function() {
+  const potega = Math.pow(a, b);
 
-//reszta z dzielenia
-let modulo = 11% 4;
-console.log(modulo);
+  writeLine("Potęga a i b wynosi: " + potega);
+})();
 
+/**
+ * @description Dzielenie dwóch liczb.
+ */
+(function() {
+  const modulo = 11 % 4;
 
-//typy danych
-let c = 3, d = 12.5
-console.log(typeof(c)); //number
-console.log(typeof(d)); //number
+  writeLine("Dzielenie liczby 11 przez 4 wynosi: " + modulo);
+})();
 
-d = "tekst";
-console.log(typeof(d)); //string
-let prawda = true;
-console.log(typeof(prawda)); //booleon
+/**
+ * @description Typy zmiennych/danych.
+ */
+(function() {
+  let c = 3,
+    d = 12.5;
 
-let nic = null;
-console.log(typeof(nic)); //object
+  console.log(`Zmienna c (${c})`, "jest typu", typeof c); // Number
+  console.log(`Zmienna d (${d})`, "jest typu", typeof d); // Number
 
-let pusta;
-console.log(typeof(pusta)); //undenfined
+  d = "tekst";
+  console.log(`Zmienna d (${d})`, "jest typu", typeof d); // String
 
+  let prawda = true;
+  console.log(`Zmienna prawda (${prawda})`, "jest typu", typeof prawda); // Boolean
 
-//systemy liczbowe
-let dziesietny = 10;
-let oktalny = 012;
+  let nic = null;
+  console.log(`Zmienna nic (${nic})`, "jest typu", typeof nic); // Null
 
-/*
-012 => 1 * 8^1 + 2 * 8 ^ 8 + 2 = 10
-*/
+  let pusta;
+  console.log(`Zmienna pusta (${pusta})`, "jest typu", typeof pusta); // Undefined
+})();
 
-let szesnastkowy = 0xA;
-console.log(szesnastkowy);
+(function() {
+  /** Systemy liczbowe */
+  let dziesietny = 10;
+  let oktalny = 012;
 
+  /*
+  012 => 1 * 8^1 + 2 * 8 ^ 8 + 2 = 10
+  */
 
-//prompt
+  let szesnastkowy = 0xa;
+  console.log("Szesnanstkowy 0xa wynosi", szesnastkowy);
+})()(
+  /**
+   * @description Podawanie pierwszej liczby do prompt.
+   * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt}
+   */
+  function() {
+    let liczba = prompt("Podaj pierwszą liczbę");
 
-let liczba = prompt("Podaj pierwszą liczbę");
-console.log('Pierwsza liczba wynosi: ' + liczba);
-
-console.log(typeof(liczba));
+    console.log(
+      `Pierwsza liczba wynosi ${liczba}`,
+      "i jest typu",
+      typeof liczba
+    );
+  }
+)();
 
 /*
   Zadanie 1
   Użytkownik wprowadza z klawiatury dwue liczby. Wyświetl na ekranie sumę tych liczb w formacie:
   "Suma a i b wynosi: ....."
 */
+(function() {
+  let l1 = prompt("Podaj pierwszą liczbę");
+  let l2 = parseInt(prompt("Podaj drugą liczbę"));
+  l1 = parseInt(l1);
 
-/*let l1 = prompt('Podaj pierwszą liczbę');
-let l2 = parseInt(prompt('Podaj drugą liczbę'));
-l1 = parseInt(l1);
-
-
-let dodawanie= l1 + l2;
-document.write("<br>Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie);
-
-
+  let dodawanie = l1 + l2;
+  writeLine("Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie);
+})();
 
 /*
 Zadanie 2
 Użytkownik wprowadza z klawiatury dwue liczby (mogą być zmiennoprzecinkowe). Wyświetl na ekranie sumę tych liczb w formacie:
 "Suma a i b wynosi: ....."
 */
+(function() {
+  let l1 = prompt("Podaj pierwszą liczbę");
+  let l2 = parseFloat(prompt("Podaj drugą liczbę"));
+  l1 = parseFloat(l1);
 
-/*let l1 = prompt('Podaj pierwszą liczbę');
-let l2 = parseFloat(prompt('Podaj drugą liczbę'));
-l1 = parseFloat(l1);
+  let dodawanie1 = l1 + l2;
+  writeLine("Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie1);
+})();
 
+// * Camel Case
+// => liczbaPierwsza, zmiennaPomocnicza, mamNaImie
 
-let dodawanie1= l1 + l2;
-document.write("<br>Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie1);
-*/
+// * Snake case
+// => liczba_pierwsza, Zmienna_pomocnicza, mam_na_imie
 
-//Camel Case
-//liczbaPierwsza zmiennaPomocnicza mamNaImie
+// * Kebab case
+// => liczba-pierwsza, zmienna-pomocnicza, mam-na-imie
+
+// * Studly caps
+// => lIczBaPieRWszA, zMiENNaPomoCNIcza, mAmnAIMie
 
 /*
   Zadanie 3
   Napisz progam, który obliczy pole prostokąta. Użytkownik podaje dane z klawiatury (liczby zmiennoprzecinkowe)
   Wynik wyświetl na ekranie w formacie: "Bok a = ...., bok b = ....., pole wynosi: .....cm^2 (w indexie górnym)"
 */
+(function() {
+  let polea = prompt("Podaj a");
+  let poleb = prompt("Podaj b");
+  a1 = parseFloat(polea);
+  b1 = parseFloat(poleb);
 
-let polea = prompt('Podaj a');
-let poleb =  prompt("Podaj b");
-a1 = parseFloat(polea);
-b1 = parseFloat(poleb);
+  let wynikpole = a1 * b1; // ? Zmienna nie została użyta.
+  let wynosi = 2 * a1 + 2 * b1;
 
-let wynikpole = a1 * b1;
-let wynosi = 2 * a1 + 2 * b1;
+  let dodawanie1 = a1 + b1; // ? Zmienna nie została użyta.
 
+  writeLine("Bok a = " + a1 + ", bok b = " + b1 + "pole wynosi " + wynosi);
+})();
 
-let dodawanie1= a1 + b1;
-document.write("<br>Bok a = " + a1 + ", bok b = " + b1 + "pole wynosi " + wynosi);
+/**
+ * @description Wyświetla jedną linijkę tekstu w dokumencie.
+ * @param {string} text
+ */
+function writeLine(text) {
+  document.write(text);
+  document.write("<br/>");
+}
