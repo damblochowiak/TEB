@@ -1,6 +1,6 @@
 /**
  * 1_zmienne.js
- * Author: Damian Błochowiak <damian.blochowiak@gmail..com>
+ * Author: Damian Błochowiak <xomod99@gmail.com>
  * MIT License
  */
 
@@ -95,12 +95,13 @@ let a = 5,
  * @description Podawanie pierwszej liczby do prompt.
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt}
  */
+/*
 (function() {
   let liczba = prompt("Podaj pierwszą liczbę");
 
   console.log(`Pierwsza liczba wynosi ${liczba}`, "i jest typu", typeof liczba);
 })();
-
+*/
 /*
   Zadanie 1
   Użytkownik wprowadza z klawiatury dwue liczby. Wyświetl na ekranie sumę tych liczb w formacie:
@@ -136,7 +137,8 @@ Użytkownik wprowadza z klawiatury dwue liczby (mogą być zmiennoprzecinkowe). 
   Napisz progam, który obliczy pole prostokąta. Użytkownik podaje dane z klawiatury (liczby zmiennoprzecinkowe)
   Wynik wyświetl na ekranie w formacie: "Bok a = ...., bok b = ....., pole wynosi: .....cm^2 (w indexie górnym)"
 */
-/*(function() {
+
+(function() {
   let polea = prompt("Podaj a");
   let poleb = prompt("Podaj b");
   a1 = parseFloat(polea);
@@ -147,21 +149,25 @@ Użytkownik wprowadza z klawiatury dwue liczby (mogą być zmiennoprzecinkowe). 
 
   let dodawanie1 = a1 + b1; // ? Zmienna nie została użyta.
 
-  writeLine("Bok a = " + a1 + ", bok b = " + b1 + "pole wynosi " + wynosi);
+  writeLine("Bok a = " + a1 + ", bok b = " + b1 + " pole wynosi " + wynosi);
 })();
+
+
+
+
+/*
+Zadanie 4
+Pole trójkąta
 */
-/**
- * @description Wyświetla jedną linijkę tekstu w dokumencie.
- * @param {string} text
- */
-/*function writeLine(text) {
+
+
+
+
+
+function writeLine(text) {
   document.write(text);
   document.write("<br/>");
-}*/
-
-
-
-
+}
 
 // * Camel Case
 // => liczbaPierwsza, zmiennaPomocnicza, mamNaImie
