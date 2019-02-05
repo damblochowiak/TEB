@@ -1,6 +1,6 @@
 /**
  * 1_zmienne.js
- * Author: Damian Błochowiak <xomod99@gmail.com>
+ * Author: Damian Błochowiak <damian.blochowiak@gmail..com>
  * MIT License
  */
 
@@ -89,68 +89,54 @@ let a = 5,
 
   let szesnastkowy = 0xa;
   console.log("Szesnanstkowy 0xa wynosi", szesnastkowy);
-})()(
-  /**
-   * @description Podawanie pierwszej liczby do prompt.
-   * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt}
-   */
-  function() {
-    let liczba = prompt("Podaj pierwszą liczbę");
+})();
 
-    console.log(
-      `Pierwsza liczba wynosi ${liczba}`,
-      "i jest typu",
-      typeof liczba
-    );
-  }
-)();
+/**
+ * @description Podawanie pierwszej liczby do prompt.
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt}
+ */
+(function() {
+  let liczba = prompt("Podaj pierwszą liczbę");
+
+  console.log(`Pierwsza liczba wynosi ${liczba}`, "i jest typu", typeof liczba);
+})();
 
 /*
   Zadanie 1
   Użytkownik wprowadza z klawiatury dwue liczby. Wyświetl na ekranie sumę tych liczb w formacie:
   "Suma a i b wynosi: ....."
 */
-(function() {
-  let l1 = prompt("Podaj pierwszą liczbę");
-  let l2 = parseInt(prompt("Podaj drugą liczbę"));
-  l1 = parseInt(l1);
 
-  let dodawanie = l1 + l2;
-  writeLine("Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie);
-})();
+// (function() {
+//   let l1 = prompt("Podaj pierwszą liczbę");
+//   let l2 = parseInt(prompt("Podaj drugą liczbę"));
+//   l1 = parseInt(l1);
+
+//   let dodawanie = l1 + l2;
+//   writeLine("Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie);
+// })();
 
 /*
 Zadanie 2
 Użytkownik wprowadza z klawiatury dwue liczby (mogą być zmiennoprzecinkowe). Wyświetl na ekranie sumę tych liczb w formacie:
 "Suma a i b wynosi: ....."
 */
-(function() {
-  let l1 = prompt("Podaj pierwszą liczbę");
-  let l2 = parseFloat(prompt("Podaj drugą liczbę"));
-  l1 = parseFloat(l1);
 
-  let dodawanie1 = l1 + l2;
-  writeLine("Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie1);
-})();
+// (function() {
+//   let l1 = prompt("Podaj pierwszą liczbę");
+//   let l2 = parseFloat(prompt("Podaj drugą liczbę"));
+//   l1 = parseFloat(l1);
 
-// * Camel Case
-// => liczbaPierwsza, zmiennaPomocnicza, mamNaImie
-
-// * Snake case
-// => liczba_pierwsza, Zmienna_pomocnicza, mam_na_imie
-
-// * Kebab case
-// => liczba-pierwsza, zmienna-pomocnicza, mam-na-imie
-
-// * Studly caps
-// => lIczBaPieRWszA, zMiENNaPomoCNIcza, mAmnAIMie
+//   let dodawanie1 = l1 + l2;
+//   writeLine("Suma " + l1 + " i " + l2 + " wynosi: " + dodawanie1);
+// })();
 
 /*
   Zadanie 3
   Napisz progam, który obliczy pole prostokąta. Użytkownik podaje dane z klawiatury (liczby zmiennoprzecinkowe)
   Wynik wyświetl na ekranie w formacie: "Bok a = ...., bok b = ....., pole wynosi: .....cm^2 (w indexie górnym)"
 */
-(function() {
+/*(function() {
   let polea = prompt("Podaj a");
   let poleb = prompt("Podaj b");
   a1 = parseFloat(polea);
@@ -163,12 +149,25 @@ Użytkownik wprowadza z klawiatury dwue liczby (mogą być zmiennoprzecinkowe). 
 
   writeLine("Bok a = " + a1 + ", bok b = " + b1 + "pole wynosi " + wynosi);
 })();
-
+*/
 /**
  * @description Wyświetla jedną linijkę tekstu w dokumencie.
  * @param {string} text
  */
-function writeLine(text) {
+/*function writeLine(text) {
   document.write(text);
   document.write("<br/>");
-}
+}*/
+
+
+
+
+
+// * Camel Case
+// => liczbaPierwsza, zmiennaPomocnicza, mamNaImie
+
+// * Snake case
+// => liczba_pierwsza, Zmienna_pomocnicza, mam_na_imie
+
+// * Studly caps
+// => lIczBaPieRWszA, zMiENNaPomoCNIcza, mAmnAIMie
