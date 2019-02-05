@@ -160,6 +160,22 @@ Zadanie 4
 Pole trójkąta
 */
 
+(function() {
+   let poleA = window.prompt("Podaj A");
+   let poleH = window.prompt("Podaj H");
+
+   const pole = 0.5*poleA*poleH;
+
+   writeLine(`Pole trójkąta wynosi: ${pole}cm<sup>2</sup>`);
+})();
+
+
+(function(){
+let promien = window.prompt("Podaj promień");
+const result = Math.PI * Math.pow(promien, 2);
+writeLine(`Pole koła wynosi: ${result}cm<sup>2</sup>`);
+})();
+
 
 
 
