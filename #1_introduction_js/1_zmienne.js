@@ -1,6 +1,6 @@
 /**
  * 1_zmienne.js
- * Author: Damian Błochowiak <xomod99@gmail.com>
+ * Author: Damian Błochowiak <damian.blochowiak@gmail.com>
  * MIT License
  */
 
@@ -169,6 +169,10 @@ Pole trójkąta
    writeLine(`Pole trójkąta wynosi: ${pole}cm<sup>2</sup>`);
 })();
 
+/*
+Zadanie 5
+Pole koła
+*/
 
 (function(){
 let promien = window.prompt("Podaj promień");
@@ -178,7 +182,7 @@ writeLine(`Pole koła wynosi: ${result}cm<sup>2</sup>`);
 
 
 
-
+////////////////////////////////////////////
 
 function writeLine(text) {
   document.write(text);
